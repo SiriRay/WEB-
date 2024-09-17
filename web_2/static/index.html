@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Search</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="title">
+        <p>Stock Search</p>
+
+    </div>
+    <form id="stock-search-form">
+        <button type="submit" id="search-button">
+            <img src="static/img/search-solid.svg" alt="Search"/>
+        </button>
+        <input type="text" id="stock-symbol" required placeholder="Enter Stock Ticker Symbol">
+        <button type="button" id="clear-button">
+            <img src="static/img/times-solid.svg" alt="Clear">
+        </button>
+        
+    </form>
+
+    <div class="tab-container">
+    <button id="company-details-button" style="display:none;" class="default">Company</button>
+    <button id="quote-details-button" style="display:none;">Stock Summary</button>
+    <button id="chart-details-button" style="display:none;">Charts</button>
+    <button id="news-details-button" style="display: none;">Latest News</button>
+    </div> 
+    <div id="search-results" style="display:block;">
+    </div>
+    <div id="error-message" class="error-container">
+        Error: No record has been found, please enter a valid symbol
+    </div>      
+
+    <div id="company-details" style="display:none;">
+    </div>
+
+    <div id="quote-details" style="display:none;">
+    </div>
+
+    <div id="highcharts-container" style="display:none;">
+    </div>
+    
+    <div id="news-details" style="display: none;">
+    </div>
+
+    
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="static/script2.js"></script>
+</body>
+</html>
